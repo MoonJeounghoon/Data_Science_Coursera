@@ -1,0 +1,11 @@
+NEI <- readRDS("summarySCC_PM25.rds")
+SCC <- readRDS("Source_Classification_Code.rds")
+allyear <- unique(NEI$year)
+n <- length(allyear)
+TotalEmissionsBaltimore <- array(1:n)
+for (i in 1:n){TotalEmissionsBaltimore[i] <- sum(NEI$Emissions[(NEI$year == allyear[i]) & (NEI$fips == 24510) ])}
+barplot(TotalEmissionsBaltimore, space=7, main = "Total emission", names.arg =allyear, xlab="Year", axis.lty=1, ylim=c(0, 4000))
+abline(a=TotalEmissionsBaltimore[1], b=0)
+abline(a=TotalEmissionsBaltimore[2], b=0)
+abline(a=TotalEmissionsBaltimore[3], b=0)
+abline(a=TotalEmissionsBaltimore[4], b=0)
