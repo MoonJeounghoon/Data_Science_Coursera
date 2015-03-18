@@ -1,4 +1,4 @@
-### Data set
+### Raw data set description
 - 'README.txt'
 
 - 'features_info.txt': Shows information about the variables used on the feature vector.
@@ -87,8 +87,8 @@ The complete list of variables of each feature vector is available in 'features.
 
 ### Tidy data
 First a final training data set is constructed by appending all together the data from "X_train.txt", "y_train.txt", "subject_train.txt". It results a data structure with the different measured quantities (variables), the corresponding activity and the corresponding subject.
-The same is done for the test set. Then, The variable names are then set with respect to the file "features.txt".
+The same is done for the test set. The variable names are then set with respect to the file "features.txt".
 The full data set is obtained by merging the final training and test data set. 
 The tidy data includes only measurements about the mean ("mean()") and the standard deviation ("std()") of the above variables constructed using a grep("mean()|std()") on all the variables names.
-Then a proper name is given to each activity, we distinguish: "walk", "walkdown", "walkup", "sitting", "standing", "lying".
+Then a proper name is given to each activity, we distinguish: "walk", "walkdown", "walkup", "sitting", "standing", "lying" according to 'activity_labels.txt'.
 Finally the data are aggregated to obtained the average of each variable for each activity and each subject and save into a .txt file "MyData.txt".
