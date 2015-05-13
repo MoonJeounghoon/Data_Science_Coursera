@@ -1,0 +1,270 @@
+data <- read.csv(sel[k])
+str(data)
+pollutant
+names(data)
+mean(data[names(data)==pollutant])
+sel <- names(data)=="sulfate"
+sel
+pollutant <- sulfate
+pollutant <- "sulfate"
+sel <- names(data)==pollutant
+sel
+mean(data[sel])
+test <- data[names(data)==pollutant]
+test
+mean(test)
+test <- data[names(data)==pollutant]
+test <- test[is.na(test)==FALSE]
+test
+mean(test)
+pollutantmean <- function(directory, pollutant, id ) {   filelist <- list.files(directory,full.names=T)   clean <- gsub(directory, "", filelist)   clean <- gsub(".csv","", clean)   clean <- gsub("/", "", clean)   indx <- as.numeric(clean)   sel <- filelist[indx %in% id]   for (k in 1:length(sel)){        data <- read.csv(sel[k])        col <- data[names(data)==pollutant]        col <- col[is.na(col)==FALSE]        mean(col)   }#
+}
+pollutantmean <- function(directory, pollutant, id ) {   filelist <- list.files(directory,full.names=T)   clean <- gsub(directory, "", filelist)   clean <- gsub(".csv","", clean)   clean <- gsub("/", "", clean)   indx <- as.numeric(clean)   sel <- filelist[indx %in% id]   final <- 1:length(sel)   for (k in 1:length(sel)){        data <- read.csv(sel[k])        col <- data[names(data)==pollutant]        col <- col[is.na(col)==FALSE]        final[k] <- mean(col)   }   mean(final)}
+pollutantmean("specdata", "sulfate", 1:10)
+pollutantmean("specdata", "nitrate", 23)
+id <- 1:10
+pollutant <- "sulfate"
+directory <- "specdata"
+filelist <- list.files(directory,full.names=T)
+filelist
+clean <- gsub(directory, "", filelist)
+clean <- gsub(".csv","", clean)   clean <- gsub("/", "", clean)   indx <- as.numeric(clean)
+indx
+sel <- filelist[indx %in% id]
+sel
+final <- 1:length(sel)
+final <- list()
+newlist <- list(final, list(1))
+newlist
+c(list, c="harry")
+vector = c()
+append(vector, 1)
+vector
+new <- append(vector, 1)
+new
+new <- append(vector, [1:10])
+new <- append(vector, 1:10)
+new
+new <- append(new, 1:10)
+new
+pollutantmean <- function(directory, pollutant, id ) {   filelist <- list.files(directory,full.names=T)   clean <- gsub(directory, "", filelist)   clean <- gsub(".csv","", clean)   clean <- gsub("/", "", clean)   indx <- as.numeric(clean)   sel <- filelist[indx %in% id]   final <- c()   for (k in 1:length(sel)){        data <- read.csv(sel[k])        col <- data[names(data)==pollutant]        col <- col[is.na(col)==FALSE]        final <- append(final, col)   }   mean(final)}
+pollutantmean("specdata", "sulfate", 1:10)
+pollutantmean("specdata", "nitrate", 70:72)
+pollutantmean("specdata", "nitrate", 23)
+n=10
+matrix(2,n)
+matrix(nrow=n,ncol=2)
+final <- matrix(nrow=length(sel),ncol=2)
+final$1
+final[:1]
+final[,1]
+x <- [1,2,3,4,5,6,7,8]
+x <- 1:10
+nrow(x)
+length(x)
+complete <- function(directory, id ) {   filelist <- list.files(directory,full.names=T)   clean <- gsub(directory, "", filelist)   clean <- gsub(".csv","", clean)   clean <- gsub("/", "", clean)   indx <- as.numeric(clean)   sel <- filelist[indx %in% id]   final <- matrix(nrow=length(sel),ncol=2)   for (k in 1:length(sel)){        data <- read.csv(sel[k])        final[k,1] <- indx[sel]        final[k,2] <- length(data$2[is.na(data2)==FALSE)   }   final}
+complete <- function(directory, id ) {   filelist <- list.files(directory,full.names=T)   clean <- gsub(directory, "", filelist)   clean <- gsub(".csv","", clean)   clean <- gsub("/", "", clean)   indx <- as.numeric(clean)   sel <- filelist[indx %in% id]   final <- matrix(nrow=length(sel),ncol=2)   for (k in 1:length(sel)){        data <- read.csv(sel[k])        final[k,1] <- indx[sel]        final[k,2] <- length(data$2[is.na(data2)==FALSE))   }   final}
+filelist <- list.files(directory,full.names=T)   clean <- gsub(directory, "", filelist)   clean <- gsub(".csv","", clean)   clean <- gsub("/", "", clean)   indx <- as.numeric(clean)   sel <- filelist[indx %in% id]   final <- matrix(nrow=length(sel),ncol=2)
+for (k in 1:length(sel)){        data <- read.csv(sel[k])        final[k,1] <- indx[sel]        final[k,2] <- length(data$2[is.na(data2)==FALSE))   }
+for (k in 1:length(sel)){        data <- read.csv(sel[k])        final[k,1] <- indx[sel]        final[k,2] <- length(data$2[is.na(data$2)==FALSE))   }
+for (k in 1:length(sel)){        data <- read.csv(sel[k])        final[k,1] <- indx[sel]        final[k,2] <- length(data$2[is.na(data$2)]==FALSE))   }
+for (k in 1:length(sel)){        data <- read.csv(sel[k])        final[k,1] <- indx[sel]        final[k,2] <- length(data$2[is.na(data$2)]==FALSE)   }
+k=0
+data <- read.csv(sel[k])
+sel
+k=1
+data <- read.csv(sel[k])
+data
+final[k,1] <- indx[sel]
+final[k,1] <- indx[sel[k]]
+final[k,2] <- length(data$2[is.na(data$2)]==FALSE)
+final[k,2] <- length(data$2[is.na(data$2)==FALSE])
+data$2[is.na(data$2)==FALSE]
+data
+test <- data[is.na(data)==FALSE,]
+test
+test <- data[(is.na(data)==FALSE),]
+test
+newdata <- na.omit(data)
+data
+test[complete.cases(data),]
+test <- data[complete.cases(data),]
+test
+complete <- function(directory, id ) {   filelist <- list.files(directory,full.names=T)   clean <- gsub(directory, "", filelist)   clean <- gsub(".csv","", clean)   clean <- gsub("/", "", clean)   indx <- as.numeric(clean)   sel <- filelist[indx %in% id]   final <- matrix(nrow=length(sel),ncol=2)   for (k in 1:length(sel)){        data <- read.csv(sel[k])        final[k,1] <- indx[sel[k]]        final[k,2] <- length(data[complete.cases(data),])   }   final}
+complete("specdata", 1)
+id <- 1:10
+directory <- "specdata"
+filelist <- list.files(directory,full.names=T)   clean <- gsub(directory, "", filelist)   clean <- gsub(".csv","", clean)   clean <- gsub("/", "", clean)   indx <- as.numeric(clean)
+sel <- filelist[indx %in% id]
+sel
+indx[sel]
+test <- indxt[indx %in% id]
+test <- indx[indx %in% id]
+test
+complete <- function(directory, id ) {   filelist <- list.files(directory,full.names=T)   clean <- gsub(directory, "", filelist)   clean <- gsub(".csv","", clean)   clean <- gsub("/", "", clean)   indx <- as.numeric(clean)   sel <- filelist[indx %in% id]   idout <- indx[indx %in% id]   final <- matrix(nrow=length(sel),ncol=2)   for (k in 1:length(sel)){        data <- read.csv(sel[k])        final[k,1] <- idout[sel[k]]        final[k,2] <- length(data[complete.cases(data),])   }   final}
+complete("specdata", 1)
+complete <- function(directory, id ) {   filelist <- list.files(directory,full.names=T)   clean <- gsub(directory, "", filelist)   clean <- gsub(".csv","", clean)   clean <- gsub("/", "", clean)   indx <- as.numeric(clean)   sel <- filelist[indx %in% id]   idout <- indx[indx %in% id]   final <- matrix(nrow=length(sel),ncol=2)   for (k in 1:length(sel)){        data <- read.csv(sel[k])        final[k,1] <- idout[k]        final[k,2] <- length(data[complete.cases(data),])   }   final}
+complete("specdata", 1)
+complete <- function(directory, id ) {   filelist <- list.files(directory,full.names=T)   clean <- gsub(directory, "", filelist)   clean <- gsub(".csv","", clean)   clean <- gsub("/", "", clean)   indx <- as.numeric(clean)   sel <- filelist[indx %in% id]   idout <- indx[indx %in% id]   final <- matrix(nrow=length(sel),ncol=2)   for (k in 1:length(sel)){        data <- read.csv(sel[k])        final[k,1] <- idout[k]        final[k,2] <- nrow(data[complete.cases(data),])   }   final}
+complete("specdata", 1)
+complete("specdata", c(2, 4, 8, 10, 12))
+complete("specdata", 30:25)
+complete("specdata", 3)
+complete <- function(directory, id ) {   filelist <- list.files(directory,full.names=T)   clean <- gsub(directory, "", filelist)   clean <- gsub(".csv","", clean)   clean <- gsub("/", "", clean)   indx <- as.numeric(clean)   sel <- filelist[indx %in% id]   idout <- indx[indx %in% id]   final <- matrix(nrow=length(sel),ncol=2)   for (k in 1:length(sel)){        data <- read.csv(sel[k])        final[k,1] <- idout[k]        final[k,2] <- nrow(data[complete.cases(data),])   }   data.frame(final)}
+complete("specdata", 3)
+complete <- function(directory, id ) {   filelist <- list.files(directory,full.names=T)   clean <- gsub(directory, "", filelist)   clean <- gsub(".csv","", clean)   clean <- gsub("/", "", clean)   indx <- as.numeric(clean)   sel <- filelist[indx %in% id]   idout <- indx[indx %in% id]   final <- matrix(nrow=length(sel),ncol=2)   for (k in 1:length(sel)){        data <- read.csv(sel[k])        final[k,1] <- idout[k]        final[k,2] <- nrow(data[complete.cases(data),])   }   data.frame(final)   names(final) <- c("id", "nobs")   final}
+complete("specdata", 3)
+complete <- function(directory, id ) {   filelist <- list.files(directory,full.names=T)   clean <- gsub(directory, "", filelist)   clean <- gsub(".csv","", clean)   clean <- gsub("/", "", clean)   indx <- as.numeric(clean)   sel <- filelist[indx %in% id]   idout <- indx[indx %in% id]   final <- matrix(nrow=length(sel),ncol=2, dimnames=c("id", "nobs"))   for (k in 1:length(sel)){        data <- read.csv(sel[k])        final[k,1] <- idout[k]        final[k,2] <- nrow(data[complete.cases(data),])   }   data.frame(final)}
+complete("specdata", 3)
+complete <- function(directory, id ) {   filelist <- list.files(directory,full.names=T)   clean <- gsub(directory, "", filelist)   clean <- gsub(".csv","", clean)   clean <- gsub("/", "", clean)   indx <- as.numeric(clean)   sel <- filelist[indx %in% id]   idout <- indx[indx %in% id]   final <- matrix(nrow=length(sel),ncol=2, dimnames=list(NULL, c("id", "nobs")))   for (k in 1:length(sel)){        data <- read.csv(sel[k])        final[k,1] <- idout[k]        final[k,2] <- nrow(data[complete.cases(data),])   }   data.frame(final)}
+complete("specdata", 3)
+complete("specdata", 30:25)
+corr <- function(directory, threshold = 0) {        filelist <- list.files(directory,full.names=T)        sul <- c()        nit <- c()        for (k in 1:length(sel)){              data <- read.csv(sel[k])              if (nrow(data[complete.cases(data),]) > threshold) {                  sul <- append(sul, data$sulfate)                  nit <- append(nit, data$nitrate)             }   }   corr(cbind(sul, nit))}
+cr <- corr("specdata", 150)
+directory <- specdata"
+""
+directory <- "specdata"
+filelist <- list.files(directory,full.names=T)
+filelist
+corr <- function(directory, threshold = 0) {        filelist <- list.files(directory,full.names=T)        sul <- c()        nit <- c()        for (k in 1:length(filelist)){              data <- read.csv(filelist[k])              if (nrow(data[complete.cases(data),]) > threshold) {                  sul <- append(sul, data$sulfate)                  nit <- append(nit, data$nitrate)             }   }   corr(cbind(sul, nit))}
+cr <- corr("specdata", 150)
+filelist <- list.files(directory,full.names=T)
+for (k in 1:length(filelist)){              data <- read.csv(filelist[k])
+}
+data
+sul <- c()        nit <- c()
+if (nrow(data[complete.cases(data),]) > threshold) {                  sul <- append(sul, data$sulfate)                  nit <- append(nit, data$nitrate)             }
+if (nrow(data[complete.cases(data),]) > 0) {                  sul <- append(sul, data$sulfate)                  nit <- append(nit, data$nitrate)             }
+corr(cbind(sul, nit))
+test <- cbind(sul, nit)
+test
+for (k in 1:length(filelist)){              data <- read.csv(filelist[k])              data <- data[complete.cases(data),]
+}
+data
+if (nrow(data[complete.cases(data),]) > 0) {                  sul <- append(sul, data$sulfate)                  nit <- append(nit, data$nitrate)             }
+sul
+data$sulfate
+sul <- c()
+sul <- append(sul, data$sulfate)
+sul
+nit <- c()
+nit <- append(nit, data$nitrate)
+test<-cbind(sul,nit)
+tets
+test
+corr(test)
+corr(cbind(sul, nit))
+cor(cbind(sul, nit))
+corr <- function(directory, threshold = 0) {        filelist <- list.files(directory,full.names=T)        sul <- c()        nit <- c()        for (k in 1:length(filelist)){              data <- read.csv(filelist[k])              data <- data[complete.cases(data),]              if (nrow(data) > threshold) {                  sul <- append(sul, data$sulfate)                  nit <- append(nit, data$nitrate)             }   }   cor(cbind(sul, nit))}
+cr <- corr("specdata", 150)
+head(cr)
+summary(cr)
+corr <- function(directory, threshold = 0) {        filelist <- list.files(directory,full.names=T)        #sul <- c()        #nit <- c()        for (k in 1:length(filelist)){              data <- read.csv(filelist[k])              data <- data[complete.cases(data),]              if (nrow(data) > threshold) {                  cor(data$sulfate,data$nitrate)                  #sul <- append(sul, data$sulfate)                  #nit <- append(nit, data$nitrate)             }   }}
+cr <- corr("specdata", 150)
+head(cr)
+directory <- "specdata"
+threshold <- 150
+filelist <- list.files(directory,full.names=T)
+correl <- c()
+for (k in 1:length(filelist)){              data <- read.csv(filelist[k])              data <- data[complete.cases(data),]              if (nrow(data) > threshold) {                  tt <- cor(data$sulfate,data$nitrate)                  correl <- append(correl, tt)             }   }
+correl
+corr <- function(directory, threshold = 0) {        filelist <- list.files(directory,full.names=T)        #sul <- c()        #nit <- c()        correl <- c()        for (k in 1:length(filelist)){              data <- read.csv(filelist[k])              data <- data[complete.cases(data),]              if (nrow(data) > threshold) {                  tt <- cor(data$sulfate,data$nitrate)                  correl <- append(correl, tt)             }   }   correl}
+cr <- corr("specdata", 150)
+cr
+head(cr)
+summary(cr)
+cr <- corr("specdata", 400)
+head(cr)
+summary(cr)
+cr <- corr("specdata", 5000)
+summary(cr)
+length(cr)
+cr <- corr("specdata")
+summary(cr)
+length(cr)
+source("http://d396qusza40orc.cloudfront.net/rprog%2Fscripts%2Fsubmitscript1.R")
+submit()
+2
+submit()
+id <- 30:15
+id
+filelist <- list.files(directory,full.names=T)   clean <- gsub(directory, "", filelist)   clean <- gsub(".csv","", clean)   clean <- gsub("/", "", clean)   indx <- as.numeric(clean)   sel <- filelist[indx %in% id]   idout <- indx[indx %in% id]
+idout
+final <- matrix(nrow=length(sel),ncol=2, dimnames=list(NULL, c("id", "nobs")))   for (k in 1:length(sel)){        data <- read.csv(sel[k])        final[k,1] <- idout[k]        final[k,2] <- nrow(data[complete.cases(data),])   }   data.frame(final)
+final <- data.frame(final)
+test <- sort(final)
+test <- sort(final, order(id))
+test <- sort(final, order(-final$id))
+test <- final[with(final, order(-final$id)), ]
+test
+submit()
+cube <- function(x, n) {#
+        x^3#
+}
+cube(3)
+x <- 1:10#
+if(x > 5) {#
+        x <- 0#
+}
+f <- function(x) {#
+        g <- function(y) {#
+                y + z#
+        }#
+        z <- 4#
+        x + g(x)#
+}
+z <- 10#
+f(3)
+x <- 5#
+y <- if(x < 3) {#
+        NA#
+} else {#
+        10#
+}
+y
+A <- matrix(c(2, 4, 3, 1, 5, 7, 10, 2, 5), #
++   nrow=3, #
++   ncol=3))
+A <- matrix(c(2, 4, 3, 1, 5, 7, 10, 2, 5), nrow=3, ncol=3))
+A <- matrix(c(2, 4, 3, 1, 5, 7, 10, 2, 5), nrow=3, ncol=3)
+A
+solve(A)
+makeCacheMatrix <- function(x = matrix()) {    inv <- NULL    set <- function(y) {        x <<- y        inv <<- NULL    }    get <- function() x    setinverse <- function(inverse) inv <<- inverse    getinverse <- function() inv    list(set=set, get=get, setinverse=setinverse, getinverse=getinverse)}
+cacheSolve <- function(x, ...) {    ## Return a matrix that is the inverse of 'x'    inv <- x$getinverse()    if(!is.null(inv)) {        message("getting cached data.")        return(inv)    }    matrix <- x$get()    inv <- solve(matrix)    x$setinverse(inv)    inv}
+cacheSolve(A)
+x = rbind(c(1, -1/4), c(-1/4, 1))
+m = makeCacheMatrix(x)
+m$get()
+cacheSolve(m)
+test = makeCacheMatrix(A)
+test$get()
+cacheSolve(test)
+library(datasets)
+data(iris)
+str(iris)
+sel <- iris$Sepal.Length[iris$Species==virginica]
+iris$Species
+sel <- iris$Sepal.Length[iris$Species=="virginica"]
+sel
+mean(sel0)
+mean(sel)
+colMeans(iris)
+apply(iris[, 1:4], 1, mean)
+apply(iris[, 1:4], 2, mean)
+rowMeans(iris[, 1:4])
+library(datasets)
+data(mtcars)
+str(mtcars)
+tapply(mtcars$cyl, mtcars$mpg, mean)
+sapply(mtcars, cyl, mean)
+mean(mtcars$mpg, mtcars$cyl)
+with(mtcars, tapply(mpg, cyl, mean))
+with(mtcars, tapply(hp, cyl, mean))
+209.21429-82.63636
+debug(ls)
+ls
+library(knitr)
+library("knitr")
+install.packages("knitr")
+library("knitr")
+knit2html("PA1_template.Rmd")
